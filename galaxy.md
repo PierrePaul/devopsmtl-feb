@@ -3,6 +3,8 @@
 ![home](home.png)
 [https://galaxy.ansible.com](https://galaxy.ansible.com)
 
+Pierre Paul Lefebvre - DevOpsMtl February 2014
+
 ---
 
 # Why?
