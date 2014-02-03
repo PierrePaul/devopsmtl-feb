@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ansible-galaxy</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|PT+Mono' rel='stylesheet' type='text/css'>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    
+    
+    <!-- /Styles -->
+</head>
+<body class="list">
+    
+      <!-- slide source: galaxy.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>Ansible-galaxy</h1></header>
+                
+                
+                    <section class="slide-content"><p><img alt="home" src="home.png" />
+<a href="https://galaxy.ansible.com">https://galaxy.ansible.com</a></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: galaxy.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>Why?</h1></header>
+                
+                
+                    <section class="slide-content"><p>Playbook are hard to share and segment into re-usable components.</p>
+<p>So <em>roles</em> were created.</p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: galaxy.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>Why? (galaxy)</h1></header>
+                
+                
+                    <section class="slide-content"><p>Puppet got puppet forge, Chef got Cookbooks (opscode)</p>
+<p>Ansible now have Galaxy[beta].</p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: galaxy.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>The ideas behind it</h1></header>
+                
+                
+                    <section class="slide-content"><ul>
+<li>Github</li>
+<li>Facebook/Twitter/Github social login</li>
+<li>Promote best practices</li>
+</ul></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: galaxy.md -->
+        <section class="slide has_code">
+            <div>
+                
+                    <header><h1>Review and rate roles</h1></header>
+                
+                
+                    <section class="slide-content"><p><a href="https://galaxy.ansible.com/list#/roles">https://galaxy.ansible.com/list#/roles</a></p>
+<div class="highlight"><pre><span class="lineno">1</span> pip install ansible --upgrade <span class="c">#make sure you have at least &gt;1.4.0</span>
+<span class="lineno">2</span> galaxy-ansible install user_role
+</pre></div>
+</section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: galaxy.md -->
+        <section class="slide has_code">
+            <div>
+                
+                    <header><h1>No, I don't want to</h1></header>
+                
+                
+                    <section class="slide-content"><p>By default install everything in /etc/ansible/roles
+Obviously, you don't want that.</p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="c">#~/.ansible.cfg</span>
+<span class="lineno">2</span> <span class="o">[</span>defaults<span class="o">]</span>
+<span class="lineno">3</span> <span class="nv">roles_path</span> <span class="o">=</span> ~/Workbench/roles
+</pre></div>
+
+<p>See the full options : <a href="http://docs.ansible.com/intro_configuration.html">ansible.cfg</a>
+<a href="http://docs.ansible.com/intro_configuration.html">https://raw.github.com/ansible/ansible/devel/examples/ansible.cfg</a></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: galaxy.md -->
+        <section class="slide">
+            <div>
+                
+                    <header><h1>Read, then rate and comment</h1></header>
+                
+                
+                    <section class="slide-content"><p><a href="https://galaxy.ansible.com/list#/roles/1">MySQL</a></p></section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+      <!-- slide source: galaxy.md -->
+        <section class="slide has_code">
+            <div>
+                
+                    <header><h1>Share yours</h1></header>
+                
+                
+                    <section class="slide-content"><div class="highlight"><pre><span class="lineno">1</span> ansible-galaxy init superTest
+<span class="lineno">2</span> <span class="nb">cd </span>superTest
+<span class="lineno">3</span> <span class="c"># Create the project on github</span>
+<span class="lineno">4</span> git init
+<span class="lineno">5</span> git remote add github https://github.com/PierrePaul/superTest
+<span class="lineno">6</span> git push github master
+<span class="lineno">7</span> <span class="c"># Add it on the site</span>
+</pre></div>
+</section>
+                
+                <div class="presenter_notes">
+                    <section>
+                    
+                    </section>
+                </div>
+            </div>
+        </section>
+     
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+    <!-- Javascripts -->
+        
+        <script type="text/javascript" src="theme/js/slides.js"></script>
+        
+        
+    <!-- /Javascripts -->
+
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
